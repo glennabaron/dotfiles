@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# homebrew
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+# composer
+export PATH="$PATH:~/.composer/vendor/bin"
+
+# gnu utils
+export PATH="$PATH:(brew --prefix coreutils)/libexec/gnubin"
+
+# brew cask install path
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# brewed python
+export PATH="$PATH:$(brew --prefix python)/libexec/bin"
+
+# yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
+# nexus
+export PATH="$PATH:~/.nexustools"
+
+# brewed curl
+export PATH="$PATH:/usr/local/opt/curl/bin"
+
+# other brewed formulas
+export PATH="$PATH:/usr/local/opt/dirmngr/bin"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/opt/unzip/bin:$PATH"
+
+export PATH="/Applications/Redis.app/Contents/Resources/Vendor/redis/bin:$PATH"
