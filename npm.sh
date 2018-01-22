@@ -6,6 +6,7 @@ nvm install stable
 npm install -g bower
 npm install -g grunt-cli grunt
 npm install -g gulp
+npm install -g gulp-cli
 npm install -g lodash
 npm install -g forever
 npm install -g browserify
