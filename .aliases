@@ -36,6 +36,10 @@ alias cp='cp -v'
 alias gw="gulp watch"
 alias ggw="gulp && gulp watch"
 
+# yarn
+alias yw="yarn run watch"
+alias yww="yarn && yarn run watch"
+
 alias cask='brew cask' # i <3 u cask
 alias where=which # sometimes i forget
 alias brwe=brew  # typos
