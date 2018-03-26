@@ -59,8 +59,9 @@ alias linkgit='brew unlink git && brew link git --overwrite'
 
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
-# Fix NPM
+# npm
 alias fixnpm='sudo chown -R $(whoami):admin $(npm config get prefix)'
+alias npmlsg='npm ls --depth=0 -g'
 
 # vagrant shortcuts
 alias vss='LOCAL_WORKING_DIR=`vagrant_working_dir` vagrant ssh -- -oSendEnv=LOCAL_WORKING_DIR'
