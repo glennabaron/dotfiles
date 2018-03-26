@@ -62,6 +62,7 @@ apps=(
   iterm2-beta
   keepingyouawake
   lastpass
+  launchrocket
   lockdown
   max
   onyx
