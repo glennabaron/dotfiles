@@ -283,6 +283,27 @@ function gh() {
   open $giturl
 }
 
+# Opens the stash page for the current git repository (and branch) in your browser
+function stash() {
+  giturl=$(git config --get remote.origin.url)
+  gitbranch=$(git symbolic-ref --quiet --short HEAD)
+  reponame=$(basename -s .git `git config --get remote.origin.url`)
+
+  if [ "$giturl" == "" ]
+    then
+     echo "Not a git repository or no remote.origin.url set"
+     exit 1;
+  fi
+
+  giturl=${giturl//ssh:\/\/git@/https://}
+  giturl=${giturl//.git/}
+  giturl=${giturl/.net\//.net\/projects\/}
+  giturl=${giturl/$reponame/repos\/$reponame\/browse?at=refs/heads/$gitbranch}
+
+  echo $giturl
+  open $giturl
+}
+
 function git-ag () {
   if [[ "$1" = "-a" ]]
   then
