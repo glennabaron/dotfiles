@@ -1,5 +1,8 @@
 [alias]
 
+  # Get the current branch name
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+
   # View abbreviated SHA, description, and history graph of the latest 20 commits
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -39,6 +42,9 @@
   # Switch to a branch, creating it if necessary
   go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+  # set remote branch to current branch
+  gr = "!git branch -u origin/\"$(git branch-name)\""
+  
   # Show verbose output about tags, branches or remotes
   tags = tag -l
   branches = branch -a
