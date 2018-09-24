@@ -83,6 +83,9 @@
   # List contributors with number of commits
   contributors = shortlog --summary --numbered
 
+  # stashes your local changes, pulls in new changes (and rebases if needed), and then pops the changes back off the stash
+  gpp = git pull --rebase --autostash
+
   # Merge GitHub pull request on top of the `master` branch, supports non origin remotes
   # Merge GitHub pull request on top of the current branch or,
   # if a branch name is specified, on top of the specified branch
