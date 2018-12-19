@@ -9,12 +9,6 @@ You can clone the repository wherever you want. (I like to keep it in `~/project
 git clone https://github.com/glennabaron/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
-
-```bash
-source bootstrap.sh
-```
-
 Alternatively, to update while avoiding the confirmation prompt:
 
 ```bash
