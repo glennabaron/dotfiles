@@ -1,6 +1,6 @@
 {
 	"auto_complete": true,
-	"color_scheme": "Packages/User/SublimeLinter/Flatron (SL).tmTheme",
+  "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
