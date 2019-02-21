@@ -43,7 +43,7 @@
   go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
   # set remote branch to current branch
-  gr = "!git branch -u origin/\"$(git branch-name)\""
+  gr = "!git branch -u origin/\"$(git branch-name)\" && git pull"
   
   # Show verbose output about tags, branches or remotes
   tags = tag -l
