@@ -22,7 +22,6 @@ alias j="jobs"
 
 # git
 alias gs="git status"
-alias gu="git push"
 alias gp="git pull"
 alias ga="git add ."
 alias gc="git commit"
