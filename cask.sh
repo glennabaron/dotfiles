@@ -1,33 +1,33 @@
 #!/usr/bin/env bash
 
-# Install binaries using homebrewcask
+# install binaries using homebrewcask
 
-# Ask for the administrator password upfront
+# ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished
+# keep-alive: update existing `sudo` time stamp until the script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install Homebrew
+# install homebrew
 if [[ ! "$(type -P brew)" ]]; then
   true | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Exit if, for some reason, Homebrew is not installed
+# exit if, for some reason, homebrew is not installed
 [[ ! "$(type -P brew)" ]] && e_error "Homebrew failed to install." && return 1
 
-# Make sure we’re using the latest Homebrew
+# make sure we’re using the latest homebrew
 brew update
 
-# Upgrade any already-installed formulae
+# upgrade any already-installed formulae
 brew upgrade --all
 
-# Handle dependencies
+# handle dependencies
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap buo/cask-upgrade
 
-# dependencies for Formulas and Casks
+# dependencies for formulas and casks
 dependencies=(
   java
   java6
@@ -36,7 +36,7 @@ dependencies=(
   xquartz
 )
 
-# Install dependencies to /Applications - default is: /Users/$user/Applications
+# install dependencies to /Applications - default is /Users/$user/Applications
 echo "installing dependencies..."
 
 for app in "${dependencies[@]}"
@@ -44,10 +44,9 @@ do
   brew cask install --appdir="/Applications" $app
 done
 
-# Apps for caskroom
+# apps for caskroom
 apps=(
   alfred
-  alternote
   appcleaner
   blockblock
   dash
@@ -56,10 +55,14 @@ apps=(
   docker-toolbox
   dropbox
   firefox
+  github
   hazel
   hosts
   imageoptim
-  iterm2-beta
+  insomnia
+  iterm2
+  itsycal
+  kap
   keepingyouawake
   lastpass
   launchrocket
@@ -67,7 +70,6 @@ apps=(
   max
   onyx
   opera
-  ostiarius
   paw
   postman
   provisionql
@@ -78,19 +80,22 @@ apps=(
   qlstephen
   quicklook-json
   quicklook-csv
+  rocket
   sequel-pro
   sketch
   slack
   spectacle
   spotify
   sublime-text
+  sublime-merge
   tower
   transmit
   vagrant
   webpquicklook
+  zoom
 )
 
-# Install apps to /Applications - default is: /Users/$user/Applications
+# install apps to /Applications - default is /Users/$user/Applications
 echo "installing cask apps..."
 
 for app in "${apps[@]}"

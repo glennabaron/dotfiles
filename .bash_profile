@@ -62,8 +62,7 @@ if which docker-machine > /dev/null; then eval "$(docker-machine env dev)"; fi
 # autojump
 if which autojump > /dev/null; then [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh; fi
 
-# Z
-# https://github.com/rupa/z
+# Z - https://github.com/rupa/z
 if [ -f `brew --prefix`/etc/profile.d/z.sh ]; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
@@ -72,11 +71,11 @@ fi
 if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
   export NVM_DIR="$HOME/.nvm"
   . "$(brew --prefix nvm)/nvm.sh"
-  #alias builtin cd function to call nvm_auto_switch everytime
+  # alias built-in cd function to call nvm_auto_switch everytime
   function cd() { builtin cd "$@"; nvm_auto_switch; }
 fi
 
-#behat
+# behat
 export PATH="./vendor/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
