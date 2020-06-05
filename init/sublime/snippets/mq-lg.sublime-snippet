@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+@include mq('lg') {
+  ${1}
+}
+]]></content>
+    <tabTrigger>lg</tabTrigger>
+    <scope>source.scss</scope>
+    <description>'lg' Media Query</description>
+</snippet>

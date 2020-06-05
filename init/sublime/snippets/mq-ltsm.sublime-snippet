@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+@include mq('lt-sm') {
+  ${1}
+}
+]]></content>
+    <tabTrigger>lt-sm</tabTrigger>
+    <scope>source.scss</scope>
+    <description>'lt-sm' Media Query</description>
+</snippet>
